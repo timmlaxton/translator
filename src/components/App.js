@@ -1,4 +1,6 @@
 import React from 'react';
+import UserCreate from './UserCreate'
+import '../index.css'
 
 class App extends React.Component {
 
@@ -14,11 +16,14 @@ class App extends React.Component {
     return ( 
     <div className="ui container">
       <div>
-        Select a language:
+        <h1 className="header"> Translator</h1>
+      </div>
+      <div>
+        <h2>Select a language: </h2>
         <i className="flag us" onClick={() => this.onlanguageChange('english')} />
         <i className="flag nl" onClick={() => this.onlanguageChange('dutch')}/>
       </div>
-      {this.state.language}
+      <UserCreate/>
     </div>
     )
   }
